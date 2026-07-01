@@ -1,0 +1,588 @@
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary: #7C8CFF;
+    --primary-dark: #5D70F5;
+
+    --secondary: #F4F5FF;
+
+    --background: #F8F9FF;
+
+    --text: #252B42;
+
+    --light-text: #7D8597;
+
+    --white: #FFFFFF;
+
+    --shadow: 0 20px 50px rgba(124, 140, 255, 0.18);
+
+    --radius: 28px;
+
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    overflow-x: hidden;
+    color: var(--text);
+
+}
+
+.splash-page {
+
+    min-height: 100vh;
+    position: relative;
+
+}
+
+/* ==================================================
+   BACKGROUND
+================================================== */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+.blob {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: .5;
+
+}
+
+.blob1 {
+
+    width: 420px;
+    height: 420px;
+
+    background: #D9D8FF;
+
+    top: -100px;
+    left: -120px;
+
+}
+
+.blob2 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #CBE8FF;
+
+    right: -80px;
+    top: 80px;
+
+}
+
+.blob3 {
+
+    width: 380px;
+    height: 380px;
+
+    background: #E8DDFF;
+
+    bottom: -150px;
+    left: 45%;
+
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+/* ==================================================
+   LEFT SIDE
+================================================== */
+
+.hero-left {
+
+    flex: 1;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+.logo-circle {
+
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #8B94FF,
+        #738BFF
+    );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: var(--shadow);
+
+}
+
+.logo-circle i {
+
+    color: white;
+
+    font-size: 34px;
+
+}
+
+.logo h2 {
+
+    font-size: 30px;
+
+}
+
+.logo p {
+
+    color: var(--light-text);
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    background: #EEF0FF;
+
+    color: var(--primary-dark);
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+}
+
+.hero-left h1 {
+
+    font-size: 60px;
+
+    line-height: 1.15;
+
+    margin-bottom: 30px;
+
+}
+
+.description {
+
+    font-size: 18px;
+
+    color: var(--light-text);
+
+    line-height: 1.9;
+
+    max-width: 560px;
+
+}
+
+/* ==================================================
+   RIGHT SIDE
+================================================== */
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-card{
+
+    width:520px;
+
+    height:520px;
+
+    background:white;
+
+    border-radius:40px;
+
+    box-shadow:0 25px 60px rgba(124,140,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+.hero-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 70px rgba(124,140,255,.25);
+
+}
+
+.hero-card img{
+
+    width:100%;
+
+    max-width:420px;
+
+    animation:float 4s ease-in-out infinite;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.buttons{
+
+    margin-top:45px;
+
+}
+
+.primary-btn{
+
+    width:240px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #8B94FF,
+        #6D83FF
+    );
+
+    color:white;
+
+    font-size:19px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 18px 35px rgba(124,140,255,.30);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 28px 45px rgba(124,140,255,.40);
+
+}
+
+.primary-btn:active{
+
+    transform:scale(.98);
+
+}
+
+.primary-btn i{
+
+    font-size:20px;
+
+}
+
+/* ==================================================
+   ANIMATION
+================================================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-left{
+
+    animation:fadeLeft .8s ease;
+
+}
+
+.hero-right{
+
+    animation:fadeRight .8s ease;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:1100px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:80px 0;
+
+    }
+
+    .logo{
+
+        justify-content:center;
+
+    }
+
+    .description{
+
+        margin:auto;
+
+    }
+
+    .buttons{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        width:92%;
+
+        gap:40px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:42px;
+
+    }
+
+    .description{
+
+        font-size:16px;
+
+    }
+
+    .hero-card{
+
+        width:100%;
+
+        max-width:380px;
+
+        height:380px;
+
+        border-radius:30px;
+
+    }
+
+    .hero-card img{
+
+        max-width:280px;
+
+    }
+
+    .primary-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo-circle{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .logo-circle i{
+
+        font-size:28px;
+
+    }
+
+    .logo h2{
+
+        font-size:24px;
+
+    }
+
+    .badge{
+
+        font-size:13px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:34px;
+
+    }
+
+    .description{
+
+        font-size:15px;
+
+    }
+
+    .hero-card{
+
+        height:320px;
+
+    }
+
+}
