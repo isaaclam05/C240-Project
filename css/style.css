@@ -1676,3 +1676,328 @@ footer {
     }
 
 }
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.right-panel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    background:#ffffff;
+}
+
+.form-container{
+    width:100%;
+    max-width:430px;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#F3F0FF;
+    color:#5A45F5;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.form-container h2{
+    font-size:38px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.form-container p{
+    color:#666;
+    margin-bottom:35px;
+    line-height:28px;
+}
+
+/* ==========================================
+   INPUT FIELDS
+========================================== */
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#444;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border:2px solid #ECECEC;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.input-box:focus-within{
+    border-color:#5A45F5;
+    box-shadow:0 0 0 4px rgba(90,69,245,.12);
+}
+
+.input-box i:first-child{
+    width:55px;
+    text-align:center;
+    color:#888;
+    font-size:18px;
+}
+
+.input-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:16px 10px;
+    font-size:15px;
+    background:transparent;
+}
+
+.password-toggle{
+    width:55px;
+    text-align:center;
+    cursor:pointer;
+    color:#888;
+    transition:.3s;
+}
+
+.password-toggle:hover{
+    color:#5A45F5;
+}
+
+/* ==========================================
+   REMEMBER
+========================================== */
+
+.form-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#666;
+
+}
+
+.remember input{
+
+    accent-color:#5A45F5;
+
+}
+
+.form-options a{
+
+    text-decoration:none;
+
+    color:#5A45F5;
+
+    font-weight:600;
+
+}
+
+.form-options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#5A45F5,#4633D6);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(90,69,245,.25);
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:28px 0;
+
+}
+
+.divider::before,
+
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:#E8E8E8;
+
+}
+
+.divider span{
+
+    margin:0 16px;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   SOCIAL BUTTONS
+========================================== */
+
+.google-btn,
+
+.apple-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:2px solid #ECECEC;
+
+    background:white;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.google-btn:hover{
+
+    border-color:#4285F4;
+
+}
+
+.apple-btn:hover{
+
+    border-color:#222;
+
+}
+
+.google-btn i{
+
+    color:#DB4437;
+
+}
+
+.apple-btn i{
+
+    color:#111;
+
+}
+
+/* ==========================================
+   SIGNUP
+========================================== */
+
+.signup-link{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+.signup-link a{
+
+    color:#5A45F5;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.signup-link a:hover{
+
+    text-decoration:underline;
+
+}

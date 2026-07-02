@@ -337,3 +337,77 @@ if(loginForm){
     });
 
 }
+
+// Role Selection
+
+const elderlyCard=document.getElementById("elderlyCard");
+
+const caregiverCard=document.getElementById("caregiverCard");
+
+const loginForm=document.getElementById("loginForm");
+
+function selectRole(role){
+
+    localStorage.setItem("role",role);
+
+    elderlyCard.classList.remove("active");
+
+    caregiverCard.classList.remove("active");
+
+    if(role==="elderly"){
+
+        elderlyCard.classList.add("active");
+
+    }else{
+
+        caregiverCard.classList.add("active");
+
+    }
+
+    loginForm.style.display="block";
+
+}
+
+// Password Toggle
+
+const togglePassword=document.getElementById("togglePassword");
+
+const password=document.getElementById("password");
+
+togglePassword.addEventListener("click",()=>{
+
+    if(password.type==="password"){
+
+        password.type="text";
+
+        togglePassword.classList.replace("fa-eye","fa-eye-slash");
+
+    }else{
+
+        password.type="password";
+
+        togglePassword.classList.replace("fa-eye-slash","fa-eye");
+
+    }
+
+});
+
+// Login Redirect
+
+loginForm.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    const role=localStorage.getItem("role");
+
+    if(role==="elderly"){
+
+        window.location.href="patient-dashboard.html";
+
+    }else{
+
+        window.location.href="caregiver-dashboard.html";
+
+    }
+
+});
