@@ -970,510 +970,576 @@ footer {
 }
 
 /* =====================================================
-   ROLE SELECTION PAGE
+   LOGIN PAGE
 ===================================================== */
 
-.role-page {
-
+.login-page {
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     padding: 60px 20px;
-
-    background: linear-gradient(135deg, #F4F6FF 0%, #EEF2FF 100%);
-
+    background: linear-gradient(135deg, #EEF2FF, #FAFBFF);
     position: relative;
-
     overflow: hidden;
-
 }
 
-/* ==========================================
-   BACKGROUND CIRCLES
-========================================== */
+/* Background Blur */
 
-.bg-circle {
-
+.circle {
     position: absolute;
-
     border-radius: 50%;
-
-    filter: blur(120px);
-
+    filter: blur(90px);
     z-index: 0;
-
 }
 
-.circle-1 {
-
+.circle.one {
     width: 350px;
-
     height: 350px;
-
     background: rgba(90,69,245,.18);
-
     top: -120px;
-
-    left: -120px;
-
+    left: -100px;
 }
 
-.circle-2 {
-
+.circle.two {
     width: 300px;
-
     height: 300px;
+    background: rgba(90,69,245,.15);
+    right: -100px;
+    bottom: -100px;
+}
 
-    background: rgba(120,100,255,.15);
+/* Container */
 
-    bottom: -120px;
+.login-container{
+    width:1200px;
+    max-width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+    z-index:2;
+}
 
-    right: -120px;
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.left-panel{
+
+    background:linear-gradient(135deg,#5A45F5,#4A36D4);
+
+    color:white;
+
+    padding:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.left-panel .logo{
+
+    width:85px;
+
+    margin-bottom:30px;
+
+}
+
+.left-panel h1{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.left-panel p{
+
+    font-size:17px;
+
+    line-height:32px;
+
+    opacity:.9;
+
+    margin-bottom:40px;
 
 }
 
 /* ==========================================
-   MAIN CONTAINER
+   ROLE SELECTION
 ========================================== */
 
-.role-container {
+.role-selection{
 
-    width: 1100px;
+    display:grid;
 
-    max-width: 100%;
+    grid-template-columns:repeat(2,1fr);
 
-    background: #FFFFFF;
+    gap:25px;
 
-    border-radius: 30px;
+}
 
-    padding: 60px;
+.role-card{
 
-    box-shadow: 0 25px 60px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.12);
 
-    text-align: center;
+    border:2px solid transparent;
 
-    position: relative;
+    border-radius:20px;
 
-    z-index: 2;
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    text-align:center;
+
+}
+
+.role-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.20);
+
+}
+
+.role-card.active{
+
+    border:2px solid white;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.role-card img{
+
+    width:110px;
+
+    margin:auto;
+
+}
+
+.role-icon{
+
+    font-size:70px;
+
+    margin:20px 0;
+
+}
+
+.role-card h3{
+
+    margin-top:18px;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+
+}
+
+.role-card p{
+
+    font-size:14px;
+
+    line-height:24px;
+
+    margin:0;
 
 }
 
 /* ==========================================
-   LOGO
+   RIGHT PANEL
 ========================================== */
 
-.role-logo {
+.right-panel{
 
-    width: 90px;
+    display:flex;
 
-    margin-bottom: 25px;
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px;
+
+}
+
+.form-container{
+
+    width:100%;
+
+    max-width:430px;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#F1EEFF;
+
+    color:#5A45F5;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.form-container h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    color:#222;
+
+}
+
+.form-container p{
+
+    color:#666;
+
+    margin-bottom:35px;
 
 }
 
 /* ==========================================
-   TITLE
+   FORM
 ========================================== */
 
-.role-container h1 {
+#loginForm{
 
-    font-size: 48px;
-
-    font-weight: 700;
-
-    color: #222;
-
-    margin-bottom: 18px;
+    animation:fadeUp .5s ease;
 
 }
 
-.role-container h1 span {
+.input-group{
 
-    color: #5A45F5;
+    margin-bottom:22px;
 
 }
 
-/* ==========================================
-   DESCRIPTION
-========================================== */
+.input-group label{
 
-.role-description {
+    display:block;
 
-    max-width: 650px;
+    margin-bottom:10px;
 
-    margin: auto;
+    font-weight:600;
 
-    margin-bottom: 55px;
+    color:#444;
 
-    font-size: 18px;
+}
 
-    line-height: 34px;
+.input-box{
 
-    color: #666;
+    display:flex;
+
+    align-items:center;
+
+    border:2px solid #ECECEC;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    background:white;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#5A45F5;
+
+    box-shadow:0 0 0 5px rgba(90,69,245,.08);
+
+}
+
+.input-box i:first-child{
+
+    width:55px;
+
+    text-align:center;
+
+    color:#888;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:16px 10px;
+
+    font-size:15px;
+
+    background:transparent;
+
+}
+
+.password-toggle{
+
+    width:55px;
+
+    cursor:pointer;
+
+    color:#888;
+
+    transition:.3s;
+
+}
+
+.password-toggle:hover{
+
+    color:#5A45F5;
 
 }
 
 /* =====================================================
-   ROLE CARDS
+   LOGIN BUTTON
 ===================================================== */
 
-.role-cards {
+.login-btn{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:16px;
+    margin-top:10px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#5A45F5,#4633D6);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
 
-    display: grid;
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(90,69,245,.25);
+}
 
-    grid-template-columns: repeat(2, 1fr);
+/* ==========================================
+   REMEMBER ME
+========================================== */
 
-    gap: 35px;
+.form-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
 
-    margin-bottom: 50px;
+.remember{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#555;
+    cursor:pointer;
+}
+
+.remember input{
+    accent-color:#5A45F5;
+}
+
+.form-options a{
+    color:#5A45F5;
+    font-weight:600;
+    transition:.3s;
+}
+
+.form-options a:hover{
+    color:#4633D6;
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider{
+    display:flex;
+    align-items:center;
+    margin:30px 0;
+    color:#999;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#EAEAEA;
+}
+
+.divider span{
+    margin:0 18px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ==========================================
+   GOOGLE BUTTON
+========================================== */
+
+.google-btn,
+.apple-btn{
+
+    width:100%;
+
+    border:2px solid #EAEAEA;
+
+    background:#fff;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.3s;
 
 }
 
-.role-card {
+.google-btn:hover{
 
-    background: #FFFFFF;
+    border-color:#4285F4;
 
-    border: 2px solid #ECECEC;
-
-    border-radius: 25px;
-
-    padding: 35px;
-
-    cursor: pointer;
-
-    transition: all .35s ease;
-
-    position: relative;
-
-    overflow: hidden;
+    background:#F7FAFF;
 
 }
 
-.role-card::before {
+.apple-btn:hover{
 
-    content: "";
+    border-color:#000;
 
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 6px;
-
-    background: transparent;
-
-    transition: .35s;
+    background:#FAFAFA;
 
 }
 
-.role-card:hover {
+.google-btn i{
 
-    transform: translateY(-10px);
+    color:#DB4437;
 
-    border-color: #5A45F5;
-
-    box-shadow: 0 20px 40px rgba(90,69,245,.15);
+    font-size:20px;
 
 }
 
-.role-card:hover::before {
+.apple-btn i{
 
-    background: #5A45F5;
+    color:#000;
 
-}
-
-.role-card.active {
-
-    border-color: #5A45F5;
-
-    background: #F7F5FF;
-
-    box-shadow: 0 20px 45px rgba(90,69,245,.18);
-
-}
-
-.role-card.active::before {
-
-    background: #5A45F5;
+    font-size:22px;
 
 }
 
 /* ==========================================
-   CARD IMAGE
+   SIGN UP LINK
 ========================================== */
 
-.card-image {
+.signup-link{
 
-    display: flex;
+    text-align:center;
 
-    justify-content: center;
+    margin-top:25px;
 
-    align-items: center;
-
-    margin-bottom: 25px;
+    color:#666;
 
 }
 
-.card-image img {
+.signup-link a{
 
-    width: 180px;
+    color:#5A45F5;
 
-    height: 180px;
-
-    object-fit: contain;
-
-    transition: transform .35s ease;
+    font-weight:700;
 
 }
 
-.role-card:hover .card-image img {
+.signup-link a:hover{
 
-    transform: scale(1.05);
+    text-decoration:underline;
 
 }
 
 /* ==========================================
-   CARD TITLE
+   BUTTON RIPPLE EFFECT
 ========================================== */
 
-.role-card h2 {
+.login-btn,
+.google-btn,
+.apple-btn,
+.role-card{
 
-    font-size: 30px;
+    transition:all .3s ease;
 
-    font-weight: 700;
+}
 
-    color: #222;
+.google-btn:hover,
+.apple-btn:hover{
 
-    margin-bottom: 15px;
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
 
 /* ==========================================
-   CARD DESCRIPTION
+   ANIMATION
 ========================================== */
 
-.role-card p {
+@keyframes fadeUp{
 
-    color: #666;
+    from{
 
-    font-size: 16px;
+        opacity:0;
 
-    line-height: 30px;
-
-    margin-bottom: 25px;
-
-}
-
-/* ==========================================
-   FEATURE LIST
-========================================== */
-
-.role-card ul {
-
-    list-style: none;
-
-    padding: 0;
-
-    margin: 0;
-
-    text-align: left;
-
-}
-
-.role-card ul li {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 15px;
-
-    font-size: 15px;
-
-    color: #444;
-
-    font-weight: 500;
-
-}
-
-.role-card ul li i {
-
-    color: #5A45F5;
-
-    width: 18px;
-
-    text-align: center;
-
-}
-
-.selected-badge {
-
-    position: absolute;
-
-    top: 18px;
-
-    right: 18px;
-
-    width: 34px;
-
-    height: 34px;
-
-    border-radius: 50%;
-
-    background: #5A45F5;
-
-    color: white;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    opacity: 0;
-
-    transform: scale(.8);
-
-    transition: all .3s ease;
-
-}
-
-.role-card.active .selected-badge {
-
-    opacity: 1;
-
-    transform: scale(1);
-
-}
-
-/* =====================================================
-   CONTINUE BUTTON
-===================================================== */
-
-.continue-btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    padding: 18px 55px;
-
-    border: none;
-
-    border-radius: 16px;
-
-    background: linear-gradient(135deg, #5A45F5, #4633D6);
-
-    color: #FFFFFF;
-
-    font-size: 17px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all .35s ease;
-
-    box-shadow: 0 15px 35px rgba(90,69,245,.20);
-
-}
-
-.continue-btn:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow: 0 25px 45px rgba(90,69,245,.30);
-
-}
-
-.continue-btn:active {
-
-    transform: scale(.98);
-
-}
-
-.continue-btn i {
-
-    transition: transform .3s ease;
-
-}
-
-.continue-btn:hover i {
-
-    transform: translateX(5px);
-
-}
-
-/* ==========================================
-   FADE IN ANIMATION
-========================================== */
-
-.role-container {
-
-    animation: fadeIn .8s ease;
-
-}
-
-.role-card {
-
-    animation: slideUp .7s ease;
-
-}
-
-.role-card:nth-child(2) {
-
-    animation-delay: .15s;
-
-}
-
-@keyframes fadeIn {
-
-    from {
-
-        opacity: 0;
-
-        transform: scale(.96);
+        transform:translateY(30px);
 
     }
 
-    to {
+    to{
 
-        opacity: 1;
+        opacity:1;
 
-        transform: scale(1);
-
-    }
-
-}
-
-@keyframes slideUp {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(40px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
+        transform:translateY(0);
 
     }
 
@@ -1483,33 +1549,25 @@ footer {
    RESPONSIVE TABLET
 ========================================== */
 
-@media screen and (max-width: 992px) {
+@media(max-width:992px){
 
-    .role-container {
+    .login-container{
 
-        padding: 50px 40px;
-
-    }
-
-    .role-cards {
-
-        grid-template-columns: 1fr;
-
-        gap: 30px;
+        grid-template-columns:1fr;
 
     }
 
-    .role-container h1 {
+    .left-panel{
 
-        font-size: 40px;
+        text-align:center;
 
     }
 
-    .role-description {
+    .role-selection{
 
-        font-size: 17px;
+        max-width:500px;
 
-        line-height: 30px;
+        margin:auto;
 
     }
 
@@ -1519,423 +1577,427 @@ footer {
    RESPONSIVE MOBILE
 ========================================== */
 
-@media screen and (max-width: 768px) {
+@media(max-width:768px){
 
-    .role-page {
+    .login-page{
 
-        padding: 30px 15px;
-
-    }
-
-    .role-container {
-
-        padding: 35px 25px;
-
-        border-radius: 25px;
+        padding:20px;
 
     }
 
-    .role-logo {
+    .login-container{
 
-        width: 75px;
-
-    }
-
-    .role-container h1 {
-
-        font-size: 32px;
+        border-radius:20px;
 
     }
 
-    .role-description {
+    .left-panel,
+    .right-panel{
 
-        font-size: 15px;
-
-        line-height: 28px;
-
-        margin-bottom: 35px;
+        padding:35px;
 
     }
 
-    .role-card {
+    .left-panel h1{
 
-        padding: 25px;
-
-    }
-
-    .card-image img {
-
-        width: 140px;
-
-        height: 140px;
+        font-size:34px;
 
     }
 
-    .role-card h2 {
+    .role-selection{
 
-        font-size: 24px;
-
-    }
-
-    .role-card p {
-
-        font-size: 15px;
-
-        line-height: 28px;
+        grid-template-columns:1fr;
 
     }
 
-    .continue-btn {
+    .role-card{
 
-        width: 100%;
+        padding:20px;
+
+    }
+
+    .role-card img{
+
+        width:90px;
+
+    }
+
+    .form-container h2{
+
+        font-size:30px;
+
+    }
+
+    .form-options{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        align-items:flex-start;
 
     }
 
 }
 
 /* ==========================================
-   SMALL MOBILE
+   SMALL PHONES
 ========================================== */
 
-@media screen and (max-width: 480px) {
+@media(max-width:480px){
 
-    .role-container {
+    .left-panel,
+    .right-panel{
 
-        padding: 25px 18px;
-
-    }
-
-    .role-container h1 {
-
-        font-size: 28px;
+        padding:25px;
 
     }
 
-    .card-image img {
+    .left-panel h1{
 
-        width: 120px;
+        font-size:28px;
 
-        height: 120px;
+    }
+
+    .form-container h2{
+
+        font-size:26px;
+
+    }
+
+    .login-btn,
+    .google-btn,
+    .apple-btn{
+
+        font-size:14px;
+
+        padding:14px;
 
     }
 
 }
 
 /* ==========================================
-   MOBILE VIEW
+   RIGHT PANEL
 ========================================== */
 
-@media screen and (max-width: 768px) {
+.right-panel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    background:#ffffff;
+}
 
-    .role-container {
+.form-container{
+    width:100%;
+    max-width:430px;
+}
 
-        padding: 30px 20px;
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#F3F0FF;
+    color:#5A45F5;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+}
 
-    }
+.form-container h2{
+    font-size:38px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:10px;
+}
 
-    .role-container h1 {
+.form-container p{
+    color:#666;
+    margin-bottom:35px;
+    line-height:28px;
+}
 
-        font-size: 30px;
+/* ==========================================
+   INPUT FIELDS
+========================================== */
 
-    }
+.input-group{
+    margin-bottom:22px;
+}
 
-    .role-description {
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#444;
+}
 
-        font-size: 15px;
+.input-box{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border:2px solid #ECECEC;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
 
-        margin-bottom: 30px;
+.input-box:focus-within{
+    border-color:#5A45F5;
+    box-shadow:0 0 0 4px rgba(90,69,245,.12);
+}
 
-    }
+.input-box i:first-child{
+    width:55px;
+    text-align:center;
+    color:#888;
+    font-size:18px;
+}
 
-    .role-cards {
+.input-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:16px 10px;
+    font-size:15px;
+    background:transparent;
+}
 
-        display: flex;
+.password-toggle{
+    width:55px;
+    text-align:center;
+    cursor:pointer;
+    color:#888;
+    transition:.3s;
+}
 
-        flex-direction: row;
+.password-toggle:hover{
+    color:#5A45F5;
+}
 
-        justify-content: center;
+/* ==========================================
+   REMEMBER
+========================================== */
 
-        align-items: stretch;
+.form-options{
 
-        gap: 15px;
+    display:flex;
 
-    }
+    justify-content:space-between;
 
-    .role-card {
+    align-items:center;
 
-        width: 48%;
+    margin-bottom:25px;
 
-        height: auto;
-
-        padding: 20px 15px;
-
-    }
-
-    .role-image {
-
-        width: 130px;
-
-        margin-bottom: 15px;
-
-    }
-
-    .role-card h2 {
-
-        font-size: 18px;
-
-        margin: 0;
-
-    }
-
-    /* Hide description */
-
-    .role-card p {
-
-        display: none;
-
-    }
-
-    /* Hide bullet points */
-
-    .role-card ul {
-
-        display: none;
-
-    }
-
-    .continue-btn {
-
-        width: 100%;
-
-        margin-top: 25px;
-
-    }
+    font-size:14px;
 
 }
 
-@media screen and (max-width: 480px) {
+.remember{
 
-    .role-card {
+    display:flex;
 
-        width: 48%;
+    align-items:center;
 
-        padding: 15px 10px;
+    gap:8px;
 
-    }
-
-    .role-image {
-
-        width: 100px;
-
-    }
-
-    .role-card h2 {
-
-        font-size: 16px;
-
-    }
+    color:#666;
 
 }
 
-.brand {
+.remember input{
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    margin-bottom: 25px;
+    accent-color:#5A45F5;
 
 }
 
-.brand-logo {
+.form-options a{
 
-    width: 85px;
+    text-decoration:none;
 
-    height: auto;
+    color:#5A45F5;
 
-    margin-bottom: 12px;
-
-}
-
-.brand h2 {
-
-    font-size: 34px;
-
-    font-weight: 700;
-
-    color: #5A45F5;
+    font-weight:600;
 
 }
 
-.role-container h1 {
+.form-options a:hover{
 
-    font-size: 52px;
-
-    font-weight: 700;
-
-    margin-bottom: 12px;
-
-    color: #222;
+    text-decoration:underline;
 
 }
 
-.role-description {
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
 
-    font-size: 18px;
+.login-btn{
 
-    color: #666;
+    width:100%;
 
-    margin-bottom: 50px;
+    padding:16px;
 
-}
+    border:none;
 
-.role-card {
+    border-radius:15px;
 
-    position: relative;
+    background:linear-gradient(135deg,#5A45F5,#4633D6);
 
-}
+    color:white;
 
-.selected-badge {
+    font-size:16px;
 
-    position: absolute;
+    font-weight:600;
 
-    top: 20px;
+    cursor:pointer;
 
-    right: 20px;
+    display:flex;
 
-    width: 34px;
+    justify-content:center;
 
-    height: 34px;
+    align-items:center;
 
-    border-radius: 50%;
+    gap:10px;
 
-    background: #5A45F5;
-
-    color: white;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    opacity: 0;
-
-    transition: .3s;
+    transition:.3s;
 
 }
 
-.role-card.active .selected-badge {
+.login-btn:hover{
 
-    opacity: 1;
+    transform:translateY(-3px);
 
-}
-
-.role-container {
-
-    width: 100%;
-    max-width: 750px;
-    padding: 40px 45px;
-    background: #FFFFFF;
-    border-radius: 28px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+    box-shadow:0 15px 35px rgba(90,69,245,.25);
 
 }
 
-.role-page {
+/* ==========================================
+   DIVIDER
+========================================== */
 
-    min-height: 100vh;
+.divider{
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    align-items:center;
 
-    align-items: center;
-
-    padding: 20px;
-
-}
-
-.role-container {
-
-    width: 100%;
-
-    max-width: 900px;
-
-    padding: 35px 50px;
-
-    border-radius: 28px;
+    margin:28px 0;
 
 }
 
-.brand-logo {
+.divider::before,
 
-    width: 55px;
+.divider::after{
 
-}
+    content:"";
 
-.brand {
+    flex:1;
 
-    margin-bottom: 15px;
+    height:1px;
 
-}
-
-.role-description {
-
-    margin-bottom: 30px;
+    background:#E8E8E8;
 
 }
 
-.role-cards {
+.divider span{
 
-    margin-bottom: 30px;
+    margin:0 16px;
 
-    gap: 25px;
+    color:#999;
 
-}
-
-.role-card {
-
-    width: 260px;
-
-    min-height: 300px;
-
-    padding: 20px;
+    font-size:13px;
 
 }
 
-.card-image img {
+/* ==========================================
+   SOCIAL BUTTONS
+========================================== */
 
-    width: 120px;
+.google-btn,
+
+.apple-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:2px solid #ECECEC;
+
+    background:white;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
 
 }
 
-.role-container h1 {
+.google-btn:hover{
 
-    font-size: 38px;
-
-    margin-bottom: 8px;
+    border-color:#4285F4;
 
 }
 
-.continue-btn {
+.apple-btn:hover{
 
-    margin-top: 25px;
-
-}
-
-body {
-
-    height: 100vh;
-
-    overflow: hidden;
+    border-color:#222;
 
 }
 
-.role-page {
+.google-btn i{
 
-    height: 100vh;
+    color:#DB4437;
+
+}
+
+.apple-btn i{
+
+    color:#111;
+
+}
+
+/* ==========================================
+   SIGNUP
+========================================== */
+
+.signup-link{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+.signup-link a{
+
+    color:#5A45F5;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.signup-link a:hover{
+
+    text-decoration:underline;
 
 }
