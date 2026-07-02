@@ -1843,3 +1843,99 @@ footer {
     box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
 
 }
+
+.role-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+.role-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    padding: 35px 50px;
+
+    border-radius: 28px;
+
+}
+
+.brand-logo {
+
+    width: 55px;
+
+}
+
+.brand {
+
+    margin-bottom: 15px;
+
+}
+
+.role-description {
+
+    margin-bottom: 30px;
+
+}
+
+.role-cards {
+
+    margin-bottom: 30px;
+
+    gap: 25px;
+
+}
+
+.role-card {
+
+    width: 260px;
+
+    min-height: 300px;
+
+    padding: 20px;
+
+}
+
+.card-image img {
+
+    width: 120px;
+
+}
+
+.role-container h1 {
+
+    font-size: 38px;
+
+    margin-bottom: 8px;
+
+}
+
+.continue-btn {
+
+    margin-top: 25px;
+
+}
+
+body {
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.role-page {
+
+    height: 100vh;
+
+}
