@@ -1832,3 +1832,14 @@ footer {
     opacity: 1;
 
 }
+
+.role-container {
+
+    width: 100%;
+    max-width: 750px;
+    padding: 40px 45px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+
+}
