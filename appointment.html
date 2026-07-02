@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Remi+ | Appointments</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <section class="appointment-page">
+
+        <div class="dashboard-container">
+
+            <!-- ==========================================
+                 HEADER
+            =========================================== -->
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <img src="images/logo.png"
+                         class="dashboard-logo"
+                         alt="Remi+">
+
+                    <div>
+
+                        <p class="welcome-text">
+
+                            Your Schedule
+
+                        </p>
+
+                        <h1>
+
+                            Appointments
+
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <button class="notification-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+            </header>
+
+            <!-- ==========================================
+                 ADD BUTTON
+            =========================================== -->
+
+            <button class="primary-btn add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Appointment
+
+            </button>
+
+            <!-- ==========================================
+                 TODAY
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Today
+
+                    </h2>
+
+                </div>
+
+                <div class="appointment-card">
+
+                    <div class="appointment-date">
+
+                        <h1>
+
+                            10
+
+                        </h1>
+
+                        <span>
+
+                            JUL
+
+                        </span>
+
+                    </div>
+
+                    <div class="appointment-details">
+
+                        <h3>
+
+                            Dr. Lim Wei Jian
+
+                        </h3>
+
+                        <p>
+
+                            General Practitioner
+
+                        </p>
+
+                        <p>
+
+                            🕑 10:30 AM
+
+                        </p>
+
+                        <p>
+
+                            Singapore General Hospital
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 UPCOMING
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Upcoming
+
+                    </h2>
+
+                </div>
+
+                <div class="appointment-card">
+
+                    <div class="appointment-date">
+
+                        <h1>
+
+                            15
+
+                        </h1>
+
+                        <span>
+
+                            JUL
+
+                        </span>
+
+                    </div>
+
+                    <div class="appointment-details">
+
+                        <h3>
+
+                            Dr. Tan Mei Ling
+
+                        </h3>
+
+                        <p>
+
+                            Cardiologist
+
+                        </p>
+
+                        <p>
+
+                            🕑 2:30 PM
+
+                        </p>
+
+                        <p>
+
+                            National Heart Centre
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="appointment-card">
+
+                    <div class="appointment-date">
+
+                        <h1>
+
+                            28
+
+                        </h1>
+
+                        <span>
+
+                            JUL
+
+                        </span>
+
+                    </div>
+
+                    <div class="appointment-details">
+
+                        <h3>
+
+                            Dr. Wong Kai Sheng
+
+                        </h3>
+
+                        <p>
+
+                            Eye Specialist
+
+                        </p>
+
+                        <p>
+
+                            🕑 9:00 AM
+
+                        </p>
+
+                        <p>
+
+                            Singapore National Eye Centre
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+                        <!-- ==========================================
+                 APPOINTMENT REMINDERS
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Appointment Reminders
+
+                    </h2>
+
+                </div>
+
+                <div class="reminder-card">
+
+                    <div class="reminder-icon">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                    </div>
+
+                    <div class="reminder-content">
+
+                        <h3>
+
+                            Reminder Enabled
+
+                        </h3>
+
+                        <p>
+
+                            You will receive a notification
+                            1 day before and 1 hour before
+                            every appointment.
+
+                        </p>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input type="checkbox"
+                               checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 PAST APPOINTMENTS
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Recent Appointments
+
+                    </h2>
+
+                </div>
+
+                <div class="history-card">
+
+                    <div class="history-left">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Dr. Sarah Lee
+
+                            </h3>
+
+                            <p>
+
+                                Diabetes Review
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+
+                        25 Jun 2026
+
+                    </span>
+
+                </div>
+
+                <div class="history-card">
+
+                    <div class="history-left">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Dr. Lim Wei Jian
+
+                            </h3>
+
+                            <p>
+
+                                Blood Pressure Follow-up
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+
+                        12 Jun 2026
+
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 MONTHLY CALENDAR
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="calendar-card">
+
+                    <div class="calendar-header">
+
+                        <h2>
+
+                            July 2026
+
+                        </h2>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <div class="calendar-placeholder">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <p>
+
+                            Monthly calendar view
+                            will be available here.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 BOTTOM NAVIGATION
+            =========================================== -->
+
+            <nav class="bottom-navbar">
+
+                <a href="home.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+
+                        Home
+
+                    </span>
+
+                </a>
+
+                <a href="appointment.html"
+                   class="nav-item active">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+
+                        Appointment
+
+                    </span>
+
+                </a>
+
+                <a href="voice.html"
+                   class="voice-button">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </a>
+
+                <a href="medication.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-pills"></i>
+
+                    <span>
+
+                        Medication
+
+                    </span>
+
+                </a>
+
+                <a href="account.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+
+                        Account
+
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

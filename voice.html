@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Remi+ | AI Voice Assistant</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         AI VOICE PAGE
+    =========================================== -->
+
+    <section class="voice-page">
+
+        <div class="dashboard-container">
+
+            <!-- ==========================================
+                 HEADER
+            =========================================== -->
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <img src="images/logo.png"
+                         alt="Remi+ Logo"
+                         class="dashboard-logo">
+
+                    <div>
+
+                        <p class="welcome-text">
+
+                            AI Voice Assistant
+
+                        </p>
+
+                        <h1>
+
+                            Talk to Remi+
+
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <button class="notification-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </button>
+
+            </header>
+
+            <!-- ==========================================
+                 AI STATUS
+            =========================================== -->
+
+            <section class="voice-status">
+
+                <div class="status-badge">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    Listening Ready
+
+                </div>
+
+                <h2>
+
+                    How can I help you today?
+
+                </h2>
+
+                <p>
+
+                    Tap the microphone to start speaking.
+                    I can answer your health questions,
+                    remind you to take your medication,
+                    and even contact your caregiver when needed.
+
+                </p>
+
+            </section>
+
+            <!-- ==========================================
+                 MICROPHONE
+            =========================================== -->
+
+            <section class="microphone-section">
+
+                <div class="voice-ripple ripple-1"></div>
+
+                <div class="voice-ripple ripple-2"></div>
+
+                <div class="voice-ripple ripple-3"></div>
+
+                <button class="voice-mic">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </button>
+
+                <p class="tap-text">
+
+                    Tap to Speak
+
+                </p>
+
+            </section>
+
+            <!-- ==========================================
+                 RECENT CONVERSATION
+            =========================================== -->
+
+            <section class="conversation">
+
+                <h2>
+
+                    Recent Conversation
+
+                </h2>
+
+                <!-- User Message -->
+
+                <div class="chat user">
+
+                    <div class="chat-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="chat-bubble">
+
+                        I have a headache today.
+
+                    </div>
+
+                </div>
+
+                <!-- AI Message -->
+
+                <div class="chat ai">
+
+                    <div class="chat-avatar ai-avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+                    <div class="chat-bubble">
+
+                        I'm sorry to hear that.
+                        Have you taken your medication today?
+                        Please drink plenty of water and get some rest.
+                        If your headache becomes severe or persistent,
+                        seek medical attention promptly.
+
+                    </div>
+
+                </div>
+
+            </section>
+
+                        <!-- ==========================================
+                 QUICK ACTIONS
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Quick Actions
+
+                    </h2>
+
+                </div>
+
+                <div class="quick-actions">
+
+                    <button class="quick-action">
+
+                        <i class="fa-solid fa-pills"></i>
+
+                        <span>
+
+                            Medication Reminder
+
+                        </span>
+
+                    </button>
+
+                    <button class="quick-action">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        <span>
+
+                            Book Appointment
+
+                        </span>
+
+                    </button>
+
+                    <button class="quick-action">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <span>
+
+                            Health Advice
+
+                        </span>
+
+                    </button>
+
+                    <button class="quick-action">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+
+                            Call Caregiver
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 EMERGENCY
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="emergency-card">
+
+                    <div>
+
+                        <h2>
+
+                            Emergency Assistance
+
+                        </h2>
+
+                        <p>
+
+                            If you require immediate help,
+                            press the SOS button below.
+
+                        </p>
+
+                    </div>
+
+                    <button class="sos-button">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        SOS
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 VOICE HISTORY
+            =========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Voice History
+
+                    </h2>
+
+                </div>
+
+                <div class="history-card">
+
+                    <div class="history-left">
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Medication Reminder
+
+                            </h3>
+
+                            <p>
+
+                                Today • 9:15 AM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="history-card">
+
+                    <div class="history-left">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Health Advice
+
+                            </h3>
+
+                            <p>
+
+                                Yesterday • 7:42 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="history-card">
+
+                    <div class="history-left">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Called Caregiver
+
+                            </h3>
+
+                            <p>
+
+                                Yesterday • 2:18 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 BOTTOM NAVIGATION
+            =========================================== -->
+
+            <nav class="bottom-navbar">
+
+                <a href="home.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+
+                        Home
+
+                    </span>
+
+                </a>
+
+                <a href="appointment.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+
+                        Appointment
+
+                    </span>
+
+                </a>
+
+                <a href="voice.html"
+                   class="voice-button active">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </a>
+
+                <a href="medication.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-pills"></i>
+
+                    <span>
+
+                        Medication
+
+                    </span>
+
+                </a>
+
+                <a href="account.html"
+                   class="nav-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+
+                        Account
+
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
