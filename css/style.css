@@ -1620,3 +1620,119 @@ footer {
     }
 
 }
+
+/* ==========================================
+   MOBILE VIEW
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .role-container {
+
+        padding: 30px 20px;
+
+    }
+
+    .role-container h1 {
+
+        font-size: 30px;
+
+    }
+
+    .role-description {
+
+        font-size: 15px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .role-cards {
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        align-items: stretch;
+
+        gap: 15px;
+
+    }
+
+    .role-card {
+
+        width: 48%;
+
+        height: auto;
+
+        padding: 20px 15px;
+
+    }
+
+    .role-image {
+
+        width: 130px;
+
+        margin-bottom: 15px;
+
+    }
+
+    .role-card h2 {
+
+        font-size: 18px;
+
+        margin: 0;
+
+    }
+
+    /* Hide description */
+
+    .role-card p {
+
+        display: none;
+
+    }
+
+    /* Hide bullet points */
+
+    .role-card ul {
+
+        display: none;
+
+    }
+
+    .continue-btn {
+
+        width: 100%;
+
+        margin-top: 25px;
+
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .role-card {
+
+        width: 48%;
+
+        padding: 15px 10px;
+
+    }
+
+    .role-image {
+
+        width: 100px;
+
+    }
+
+    .role-card h2 {
+
+        font-size: 16px;
+
+    }
+
+}
