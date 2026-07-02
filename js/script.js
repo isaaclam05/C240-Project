@@ -1,77 +1,144 @@
-// ==========================================
-// AI Caregiver
-// script.js
-// ==========================================
+/* ==========================================
+   REMI+
+   script.js
+========================================== */
 
-// Wait until page loads
 document.addEventListener("DOMContentLoaded", () => {
 
-    initScrollAnimation();
+    initRoleSelection();
+
     initSmoothScroll();
+
     initBackToTop();
-    initStickyNavbar();
-    initMobileMenu();
+
+    initAnimations();
 
 });
 
-// ==========================================
-// Fade In Animation
-// ==========================================
+/* ==========================================
+   ROLE SELECTION
+========================================== */
 
-function initScrollAnimation() {
+function initRoleSelection() {
 
-    const elements = document.querySelectorAll(
-        ".feature-card, .review-card, .stat-card, .section-title"
-    );
+    const elderlyCard = document.getElementById("elderlyCard");
 
-    const observer = new IntersectionObserver(entries => {
+    const caregiverCard = document.getElementById("caregiverCard");
 
-        entries.forEach(entry => {
+    const continueBtn = document.getElementById("continueBtn");
 
-            if (entry.isIntersecting) {
+    // Exit if this page doesn't contain role selection
+    if (!elderlyCard || !caregiverCard || !continueBtn) {
 
-                entry.target.classList.add("show");
+        return;
 
-            }
+    }
 
-        });
+    let selectedRole = null;
 
-    }, {
+    // ======================================
+    // Elderly Card
+    // ======================================
 
-        threshold: 0.15
+    elderlyCard.addEventListener("click", () => {
+
+        selectRole("elderly");
+
+    });
+
+    // ======================================
+    // Caregiver Card
+    // ======================================
+
+    caregiverCard.addEventListener("click", () => {
+
+        selectRole("caregiver");
 
     });
 
-    elements.forEach(element => {
+    // ======================================
+    // Continue Button
+    // ======================================
 
-        element.classList.add("fade-in");
-        observer.observe(element);
+    continueBtn.disabled = true;
+
+    continueBtn.addEventListener("click", () => {
+
+        if (!selectedRole) {
+
+            return;
+
+        }
+
+        localStorage.setItem("userRole", selectedRole);
+
+        window.location.href = "login.html";
 
     });
+
+    // ======================================
+    // Function
+    // ======================================
+
+    function selectRole(role) {
+
+        selectedRole = role;
+
+        elderlyCard.classList.remove("active");
+
+        caregiverCard.classList.remove("active");
+
+        if (role === "elderly") {
+
+            elderlyCard.classList.add("active");
+
+        } else {
+
+            caregiverCard.classList.add("active");
+
+        }
+
+        continueBtn.disabled = false;
+
+    }
 
 }
 
-// ==========================================
-// Smooth Scroll
-// ==========================================
+/* ==========================================
+   SMOOTH SCROLL
+========================================== */
 
 function initSmoothScroll() {
 
     const links = document.querySelectorAll('a[href^="#"]');
 
+    if (!links.length) {
+
+        return;
+
+    }
+
     links.forEach(link => {
 
-        link.addEventListener("click", function (e) {
+        link.addEventListener("click", function (event) {
 
-            const target = document.querySelector(this.getAttribute("href"));
+            const target = document.querySelector(
+                this.getAttribute("href")
+            );
 
-            if (!target) return;
+            if (!target) {
 
-            e.preventDefault();
+                return;
+
+            }
+
+            event.preventDefault();
 
             target.scrollIntoView({
 
-                behavior: "smooth"
+                behavior: "smooth",
+
+                block: "start"
 
             });
 
@@ -81,49 +148,25 @@ function initSmoothScroll() {
 
 }
 
-// ==========================================
-// Sticky Navbar Shadow
-// ==========================================
-
-function initStickyNavbar() {
-
-    const header = document.querySelector(".header");
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 40) {
-
-            header.style.boxShadow =
-                "0 8px 25px rgba(0,0,0,.08)";
-
-        } else {
-
-            header.style.boxShadow =
-                "0 5px 20px rgba(0,0,0,.05)";
-
-        }
-
-    });
-
-}
-
-// ==========================================
-// Back To Top Button
-// ==========================================
+/* ==========================================
+   BACK TO TOP BUTTON
+========================================== */
 
 function initBackToTop() {
 
-    const button = document.createElement("div");
+    const button = document.createElement("button");
 
     button.className = "back-to-top";
 
-    button.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    button.setAttribute("aria-label", "Back to Top");
+
+    button.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
 
     document.body.appendChild(button);
 
     window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 500) {
+        if (window.scrollY > 400) {
 
             button.classList.add("active");
 
@@ -149,155 +192,51 @@ function initBackToTop() {
 
 }
 
-// ==========================================
-// Mobile Menu
-// ==========================================
+/* ==========================================
+   PAGE UTILITIES
+========================================== */
 
-function initMobileMenu() {
+function initAnimations() {
 
-    const navbar = document.querySelector(".navbar");
+    const elements = document.querySelectorAll(
 
-    const navLinks = document.querySelector(".nav-links");
+        ".fade-in"
 
-    const toggle = document.createElement("div");
+    );
 
-    toggle.className = "menu-toggle";
+    if (!elements.length) {
 
-    toggle.innerHTML = '<i class="fas fa-bars"></i>';
-
-    navbar.appendChild(toggle);
-
-    toggle.addEventListener("click", () => {
-
-        navLinks.classList.toggle("active");
-
-        if (navLinks.classList.contains("active")) {
-
-            toggle.innerHTML =
-                '<i class="fas fa-times"></i>';
-
-        } else {
-
-            toggle.innerHTML =
-                '<i class="fas fa-bars"></i>';
-
-        }
-
-    });
-
-}
-
-// ==========================================
-// Button Hover Ripple
-// ==========================================
-
-const buttons = document.querySelectorAll(
-    ".btn-primary, .btn-outline"
-);
-
-buttons.forEach(button => {
-
-    button.addEventListener("mouseenter", () => {
-
-        button.style.transform = "translateY(-3px)";
-
-    });
-
-    button.addEventListener("mouseleave", () => {
-
-        button.style.transform = "translateY(0px)";
-
-    });
-
-});
-
-// ==========================================
-// Hero Image Animation
-// ==========================================
-
-const heroImage = document.querySelector(".hero-image img");
-
-if (heroImage) {
-
-    heroImage.addEventListener("mousemove", e => {
-
-        heroImage.style.transform =
-            "scale(1.02)";
-
-    });
-
-    heroImage.addEventListener("mouseleave", () => {
-
-        heroImage.style.transform =
-            "scale(1)";
-
-    });
-
-}
-
-// ==========================================
-// Footer Year
-// ==========================================
-
-const year = new Date().getFullYear();
-
-const copyright = document.querySelector(".copyright");
-
-if (copyright) {
-
-    copyright.innerHTML =
-        `© ${year} AI Caregiver. All Rights Reserved.`;
-
-}
-
-/* =====================================================
-   ROLE SELECTION
-===================================================== */
-
-const elderlyCard = document.getElementById("elderlyCard");
-const caregiverCard = document.getElementById("caregiverCard");
-const continueBtn = document.getElementById("continueBtn");
-
-let selectedRole = null;
-
-function selectRole(role) {
-
-    selectedRole = role;
-
-    localStorage.setItem("userRole", role);
-
-    elderlyCard.classList.remove("active");
-    caregiverCard.classList.remove("active");
-
-    if (role === "elderly") {
-
-        elderlyCard.classList.add("active");
-
-    } else {
-
-        caregiverCard.classList.add("active");
+        return;
 
     }
 
-    continueBtn.disabled = false;
+    const observer = new IntersectionObserver(
 
-}
+        (entries) => {
 
-if (continueBtn) {
+            entries.forEach((entry) => {
 
-    continueBtn.disabled = true;
+                if (entry.isIntersecting) {
 
-    continueBtn.addEventListener("click", function () {
+                    entry.target.classList.add("show");
 
-        if (!selectedRole) {
+                }
 
-            alert("Please select a role before continuing.");
+            });
 
-            return;
+        },
+
+        {
+
+            threshold: 0.15
 
         }
 
-        window.location.href = "login.html";
+    );
+
+    elements.forEach((element) => {
+
+        observer.observe(element);
 
     });
 
