@@ -42,43 +42,59 @@
 
     <div class="bg-circle circle-2"></div>
 
-    <!-- Role Selection -->
+    <!-- ======================================
+         ROLE SELECTION
+    ======================================= -->
 
     <section class="role-page">
 
         <div class="role-container">
 
-            <!-- Logo -->
+            <!-- Brand -->
 
-            <img src="images/logo.png"
-                 alt="Remi+ Logo"
-                 class="role-logo">
+            <div class="brand">
+
+                <img src="images/logo.png"
+                     alt="Remi+ Logo"
+                     class="brand-logo">
+
+                <h2>
+
+                    Remi+
+
+                </h2>
+
+            </div>
 
             <!-- Heading -->
 
             <h1>
 
-                Welcome to <span>Remi+</span>
+                Welcome
 
             </h1>
 
             <p class="role-description">
 
-                Whether you're managing your own health or supporting
-                someone you care about, we'll personalise your experience
-                to meet your needs.
+                Choose how you'd like to continue.
 
             </p>
 
-            <!-- Cards -->
+            <!-- Role Cards -->
 
             <div class="role-cards">
 
-                                  <!-- Elderly Card -->
+                <!-- Elderly -->
 
                 <div class="role-card"
                      id="elderlyCard"
                      onclick="selectRole('elderly')">
+
+                    <div class="selected-badge">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
 
                     <div class="card-image">
 
@@ -93,40 +109,19 @@
 
                     </h2>
 
-                    <p>
-
-                        Stay healthy with medication reminders,
-                        voice assistance, appointment tracking,
-                        and your personal AI health companion.
-
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Medication Reminders
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            AI Health Assistant
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Voice Commands
-                        </li>
-
-                    </ul>
-
                 </div>
 
-                <!-- Caregiver Card -->
+                <!-- Caregiver -->
 
                 <div class="role-card"
                      id="caregiverCard"
                      onclick="selectRole('caregiver')">
+
+                    <div class="selected-badge">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
 
                     <div class="card-image">
 
@@ -141,38 +136,11 @@
 
                     </h2>
 
-                    <p>
-
-                        Monitor your loved ones, receive alerts,
-                        review AI summaries, and support
-                        medication adherence remotely.
-
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Patient Monitoring
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Instant Notifications
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            AI Reports
-                        </li>
-
-                    </ul>
-
                 </div>
 
             </div>
 
-            <!-- Continue Button -->
+            <!-- Continue -->
 
             <button id="continueBtn"
                     class="continue-btn">
@@ -186,6 +154,8 @@
         </div>
 
     </section>
+
+    <!-- JavaScript -->
 
     <script src="js/script.js"></script>
 

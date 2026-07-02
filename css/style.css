@@ -1736,3 +1736,99 @@ footer {
     }
 
 }
+
+.brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.brand-logo {
+
+    width: 85px;
+
+    height: auto;
+
+    margin-bottom: 12px;
+
+}
+
+.brand h2 {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #5A45F5;
+
+}
+
+.role-container h1 {
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    color: #222;
+
+}
+
+.role-description {
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 50px;
+
+}
+
+.role-card {
+
+    position: relative;
+
+}
+
+.selected-badge {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #5A45F5;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    transition: .3s;
+
+}
+
+.role-card.active .selected-badge {
+
+    opacity: 1;
+
+}
