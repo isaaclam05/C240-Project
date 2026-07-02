@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Remi+ | Choose Role</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Global CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="bg-circle circle-1"></div>
+
+    <div class="bg-circle circle-2"></div>
+
+    <!-- Role Selection -->
+
+    <section class="role-page">
+
+        <div class="role-container">
+
+            <!-- Logo -->
+
+            <img src="images/logo.png"
+                 alt="Remi+ Logo"
+                 class="role-logo">
+
+            <!-- Heading -->
+
+            <h1>
+
+                Welcome to <span>Remi+</span>
+
+            </h1>
+
+            <p class="role-description">
+
+                Whether you're managing your own health or supporting
+                someone you care about, we'll personalise your experience
+                to meet your needs.
+
+            </p>
+
+            <!-- Cards -->
+
+            <div class="role-cards">
+
+                                  <!-- Elderly Card -->
+
+                <div class="role-card"
+                     id="elderlyCard"
+                     onclick="selectRole('elderly')">
+
+                    <div class="card-image">
+
+                        <img src="images/elderly.png"
+                             alt="Elderly">
+
+                    </div>
+
+                    <h2>
+
+                        Elderly
+
+                    </h2>
+
+                    <p>
+
+                        Stay healthy with medication reminders,
+                        voice assistance, appointment tracking,
+                        and your personal AI health companion.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Medication Reminders
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            AI Health Assistant
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Voice Commands
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Caregiver Card -->
+
+                <div class="role-card"
+                     id="caregiverCard"
+                     onclick="selectRole('caregiver')">
+
+                    <div class="card-image">
+
+                        <img src="images/caregiver.png"
+                             alt="Caregiver">
+
+                    </div>
+
+                    <h2>
+
+                        Caregiver
+
+                    </h2>
+
+                    <p>
+
+                        Monitor your loved ones, receive alerts,
+                        review AI summaries, and support
+                        medication adherence remotely.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Patient Monitoring
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Instant Notifications
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            AI Reports
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Continue Button -->
+
+            <button id="continueBtn"
+                    class="continue-btn">
+
+                Continue
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
