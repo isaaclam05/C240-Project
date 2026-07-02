@@ -249,3 +249,91 @@ if (copyright) {
         `© ${year} AI Caregiver. All Rights Reserved.`;
 
 }
+
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+const elderlyCard = document.getElementById("elderlyCard");
+const caregiverCard = document.getElementById("caregiverCard");
+const loginForm = document.getElementById("loginForm");
+
+function selectRole(role){
+
+    localStorage.setItem("userRole", role);
+
+    if(elderlyCard) elderlyCard.classList.remove("active");
+    if(caregiverCard) caregiverCard.classList.remove("active");
+
+    if(role === "elderly"){
+
+        elderlyCard.classList.add("active");
+
+    }else{
+
+        caregiverCard.classList.add("active");
+
+    }
+
+    if(loginForm){
+
+        loginForm.style.display = "block";
+
+    }
+
+}
+
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+if(togglePassword){
+
+    togglePassword.addEventListener("click",()=>{
+
+        if(password.type==="password"){
+
+            password.type="text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+
+        }else{
+
+            password.type="password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+
+        }
+
+    });
+
+}
+
+if(loginForm){
+
+    loginForm.addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        const role = localStorage.getItem("userRole");
+
+        if(!role){
+
+            alert("Please select Elderly or Caregiver first.");
+
+            return;
+
+        }
+
+        if(role==="elderly"){
+
+            window.location.href="patient-dashboard.html";
+
+        }else{
+
+            window.location.href="caregiver-dashboard.html";
+
+        }
+
+    });
+
+}
